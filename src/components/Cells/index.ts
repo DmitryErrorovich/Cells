@@ -2,7 +2,7 @@
 import { connect } from "react-redux";
 import {  selectedMode, cells } from "../../stores/cells";
 import { createStructuredSelector } from "reselect";
-import { setHovered, setMode } from "../../stores/cells/reducer";
+import { setHovered } from "../../stores/cells/reducer";
 import { Cells } from "./Cells";
 
 const mapState = createStructuredSelector({
@@ -12,7 +12,6 @@ const mapState = createStructuredSelector({
 
 const mapDispatch = {
   setHovered,
-  setMode,
 };
 
 export default connect(

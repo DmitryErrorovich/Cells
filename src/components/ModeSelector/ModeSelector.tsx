@@ -1,8 +1,5 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
-import { useDispatch } from "react-redux";
-// import { fetchSquaresData, setPickData } from "../../BLL/Squares/squares.slice";
-// import "antd/dist/antd.css";
 import "./styles.scss";
 
 type Mode = {
@@ -12,13 +9,11 @@ type Mode = {
 
 interface IModeSelector {
   modes: Mode[];
-  loading: "idle" | "pending" | "succeeded" | "failed";
   fetchCellsInfo: () => void;
-  setMode: any;
-  selectedMode: Mode;
+  setMode: (args: string) => void;
 }
 
-export const ModeSelector = ({loading, fetchCellsInfo, setMode, selectedMode, modes}: IModeSelector) => {
+export const ModeSelector = ({ fetchCellsInfo, setMode, modes}: IModeSelector) => {
   const [selected, setSelected] = useState()
 
   useEffect(() => {

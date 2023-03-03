@@ -7,7 +7,7 @@ export type Cell = {
   hovered: boolean;
 };
 
-interface IInitialState {
+export interface IInitialState {
   modes: [];
   selectedMode: { name: string; field: number } | null;
   cells: Cell[];

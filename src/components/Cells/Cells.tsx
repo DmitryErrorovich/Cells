@@ -5,7 +5,7 @@ import "./styles.scss";
 
 interface ICells {
   selectedMode: { name: string; field: number };
-  setHovered: any;
+  setHovered: (arg: number) => void;
   cells: Cell[];
 }
 
@@ -17,7 +17,7 @@ export const Cells = ({ selectedMode, setHovered, cells }: ICells) => {
   if (!selectedMode) return null;
   return (
     <div className="cells">
-      {cells.map((item, index) => {
+      {cells.map((item) => {
         return (
           <div
             onMouseEnter={handleHovered(item.id)}
