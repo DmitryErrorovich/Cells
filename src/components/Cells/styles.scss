@@ -1,0 +1,28 @@
+.cells {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 300px;
+  flex-wrap: wrap;
+
+  &_single {
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    background-color: aliceblue;
+    border: 1px solid #242526;
+    -webkit-transition: background-color 0.5s;
+    
+    &___hovered {
+      background-color: #ff4e9b;
+      border-radius: 5px;
+      width: 50px;
+      height: 50px;
+      -webkit-transition: background-color 0.3s;
+      border: 1px solid #242526;
+    }
+  }
+
+}
